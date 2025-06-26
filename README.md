@@ -1,3 +1,6 @@
-# Drip Code Studio Site
+# DripCode Studio – Official Website
 
-This is the site for the Drip Code Studio.
+Welcome to the source code of **DripCode Studio**, a creative web & app development agency.
+
+## 🌍 Visit us
+👉 [https://dripcodestudio.com](https://dripcodestudio.com)

@@ -13,7 +13,7 @@ function App() {
           <h className="text-6xl md:text-9xl font-bold mb-4 text-center text-white font-geist">
             Drip Code Studios
           </h>
-          <p className="text-xl md:text-3xl text-gray-600 mb-8 font-geist text-white">
+          <p className="text-xl md:text-3xl text-gray-600 mb-8 font-geist ">
             Welcome to Drip Code Studios
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

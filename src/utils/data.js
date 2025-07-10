@@ -43,9 +43,9 @@ export const translations = {
     getQuote: "Get Custom Quote",
 
     // About
-    aboutTitle: "About DevCraft",
+    aboutTitle: "About DripCode Studio",
     aboutDesc1:
-      "We are a passionate team of developers, designers, and digital strategists who believe in the power of exceptional web experiences. Since 2019, we've been helping businesses of all sizes transform their digital presence and achieve their goals.",
+      "We are a passionate team of developers, designers, and digital strategists who believe in the power of exceptional web experiences. Since 2025, we've been helping businesses of all sizes transform their digital presence and achieve their goals.",
     aboutDesc2:
       "Our approach combines technical expertise with creative vision, ensuring that every project we deliver not only meets but exceeds expectations. We're committed to building long-term partnerships with our clients.",
     projectsCompleted: "Projects Completed",
@@ -154,9 +154,9 @@ export const translations = {
     getQuote: "Obtenir un Devis Personnalisé",
 
     // About
-    aboutTitle: "À propos de DevCraft",
+    aboutTitle: "À propos de DripCode Studio",
     aboutDesc1:
-      "Nous sommes une équipe passionnée de développeurs, designers et stratèges numériques qui croient au pouvoir des expériences web exceptionnelles. Depuis 2019, nous aidons les entreprises de toutes tailles à transformer leur présence numérique et atteindre leurs objectifs.",
+      "Nous sommes une équipe passionnée de développeurs, designers et stratèges numériques qui croient au pouvoir des expériences web exceptionnelles. Depuis 2025, nous aidons les entreprises de toutes tailles à transformer leur présence numérique et atteindre leurs objectifs.",
     aboutDesc2:
       "Notre approche combine l'expertise technique avec une vision créative, garantissant que chaque projet que nous livrons non seulement répond mais dépasse les attentes. Nous nous engageons à construire des partenariats à long terme avec nos clients.",
     projectsCompleted: "Projets Complétés",

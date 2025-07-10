@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="min-h-screen transition-colors duration-300 flex flex-col">
         <Header />
-        <main className="flex-1 pt-20">
+        <main className="flex-1">
           <Hero />
           <Services />
           <About />

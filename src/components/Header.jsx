@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed top-0 py-8 left-0 right-0 z-50 transition-all duration-300  bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm  border-gray-200 dark:border-gray-700 shadow-lg `}
+      className={`fixed top-0 py-8 left-0 right-0 z-50 transition-all duration-300   backdrop-blur-lg   shadow-lg bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 dark:from-blue-900 dark:via-blue-900 dark:to-blue-800 `}
     >
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-8">
@@ -56,7 +56,7 @@ const Header = () => {
             ))}
 
             {/* Theme Toggle */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors ${
                 scrolled
@@ -69,7 +69,7 @@ const Header = () => {
               ) : (
                 <Sun className="w-5 h-5" />
               )}
-            </button>
+            </button> */}
 
             {/* Language Toggle */}
             <div className="relative">
@@ -88,7 +88,8 @@ const Header = () => {
               </button>
             </div>
 
-            <button
+            <a
+              href="mailto:dripcodestudio@gmail.com"
               className={`font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105 ${
                 scrolled
                   ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg hover:shadow-xl"
@@ -96,12 +97,12 @@ const Header = () => {
               }`}
             >
               {t("getStarted")}
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button
+            {/* <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors ${
                 scrolled
@@ -114,7 +115,7 @@ const Header = () => {
               ) : (
                 <Sun className="w-5 h-5" />
               )}
-            </button>
+            </button> */}
 
             <button
               onClick={() => changeLanguage(language === "en" ? "fr" : "en")}
@@ -149,7 +150,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 shadow-lg mt-5 rounded-lg">
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 shadow-lg  mt-5 rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
@@ -161,10 +162,13 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="px-3 py-2 w-full">
+                <a
+                  href="mailto:dripcodestudio@gmail.com"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
                   {t("getStarted")}
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { translations } from "../translations/translations.js";
+import { translations } from "../utils/data.js";
 import { createContext, useContext, useState } from "react";
 
 const LanguageContext = createContext();

@@ -1,8 +1,10 @@
-import { ArrowRight, Zap } from "lucide-react";
+import Header from "./components/Header";
 function App() {
   return (
     <>
-      <h1>Drip Code Studios</h1>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 flex flex-col">
+        <Header />
+      </div>
     </>
   );
 }

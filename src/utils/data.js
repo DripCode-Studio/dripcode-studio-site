@@ -43,7 +43,7 @@ export const translations = {
     getQuote: "Get Custom Quote",
 
     // About
-    aboutTitle: "About DripCode Studio",
+    aboutTitle: "About ",
     aboutDesc1:
       "We are a passionate team of developers, designers, and digital strategists who believe in the power of exceptional web experiences. Since 2025, we've been helping businesses of all sizes transform their digital presence and achieve their goals.",
     aboutDesc2:
@@ -154,7 +154,7 @@ export const translations = {
     getQuote: "Obtenir un Devis Personnalisé",
 
     // About
-    aboutTitle: "À propos de DripCode Studio",
+    aboutTitle: "À propos de ",
     aboutDesc1:
       "Nous sommes une équipe passionnée de développeurs, designers et stratèges numériques qui croient au pouvoir des expériences web exceptionnelles. Depuis 2025, nous aidons les entreprises de toutes tailles à transformer leur présence numérique et atteindre leurs objectifs.",
     aboutDesc2:

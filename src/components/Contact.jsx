@@ -247,9 +247,13 @@ const Contact = () => {
               {t("needHelp")}
             </h3>
             <p className="text-gray-300 mb-6">{t("consultationDesc")}</p>
-            <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            <a
+              href="https://calendly.com/dripcodestudio/30min"
+              target="_blank"
+              className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+            >
               {t("scheduleFree")}
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -193,17 +193,20 @@ const Contact = () => {
                       <option value="" className="text-gray-800">
                         Select budget range
                       </option>
-                      <option value="500-5000" className="text-gray-800">
-                        $500 - $5000
+                      <option value="under-5000" className="text-gray-800">
+                        under $5000
                       </option>
                       <option value="5000-10000" className="text-gray-800">
-                        $5000 - $10,000
+                        $5000 - $10000
                       </option>
                       <option value="10000-25000" className="text-gray-800">
                         $10,000 - $25,000
                       </option>
-                      <option value="25000+" className="text-gray-800">
-                        $25,000+
+                      <option value="25000-50000" className="text-gray-800">
+                        $25,000 - $50,000
+                      </option>
+                      <option value="50000-above" className="text-gray-800">
+                        $50,000+
                       </option>
                     </select>
                   </div>

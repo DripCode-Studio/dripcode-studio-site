@@ -84,7 +84,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("webDev")}
@@ -92,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("mobileApps")}
@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("ecommerce")}
@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("uiux")}
@@ -116,7 +116,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("strategy")}
@@ -131,7 +131,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {t("about")}
@@ -149,26 +149,21 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/dripcodestudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Careers
                 </a>
               </li>
+
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Case Studies
+                  Services
                 </a>
               </li>
             </ul>
@@ -216,19 +211,19 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               <a
-                href="#"
+                href=""
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 {t("privacyPolicy")}
               </a>
               <a
-                href="#"
+                href=""
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 {t("termsOfService")}
               </a>
               <a
-                href="#"
+                href=""
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 {t("cookiePolicy")}

@@ -1,28 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Mail, Phone, MapPin, Send, Calendar } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    budget: "",
-    message: "",
-  });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setLoading(true);
+
+    const formData = new FormData(formRef.current);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORM_API_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Message sent successfully ✅");
+        formRef.current.reset();
+      } else {
+        toast.error("Oops! Something went wrong ❌");
+      }
+    } catch (error) {
+      toast.error("Error submitting form: " + error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,7 +131,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -129,8 +144,6 @@ const Contact = () => {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       required
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                       placeholder="Your full name"
@@ -148,8 +161,6 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                       placeholder="your.email@example.com"
@@ -169,8 +180,6 @@ const Contact = () => {
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company}
-                      onChange={handleChange}
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                       placeholder="Your company name"
                     />
@@ -186,8 +195,6 @@ const Contact = () => {
                     <select
                       id="budget"
                       name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     >
                       <option value="" className="text-gray-800">
@@ -222,8 +229,6 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={6}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
@@ -233,6 +238,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="group w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   {t("sendMessage")}
